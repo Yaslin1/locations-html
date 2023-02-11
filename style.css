@@ -2,16 +2,38 @@
     width: 100vw;
     height: 100%;
     display: flex;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#basilisk-container p,
+#basilisk-container a{
+    font-size:24px;
+}
+
+#basilisk-container h2{
+    font-size: 34px
+}
+
+#basilisk-container h3{
+    font-size: 28px
 }
 
 #basilisk-container aside{
-    width: 35%;
+    width: 25%;
     overflow: scroll;
 }
 #title-container {
     text-align:center;
     text-transform:uppercase;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 1rem 0;
+    border-bottom: 1px solid lightgrey;
+}
+#title-container h1 {
+    margin: 0;
+}
+
+aside {
+    border-right: 1px solid lightgrey;
 }
 
 #store-select{
@@ -35,11 +57,12 @@
 #store-select select {
     width: 250px;
     margin: 0 0.5rem;
+    text-align: center;
     padding: 0.5rem 0.75rem;
 }
 
 #iframe-container{
-    width: 65%;
+    width: 75%;
     height: 100%;
 }
 
@@ -48,18 +71,46 @@
     height: 100%;
 }
 
-.locations-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.locations-container h2 {
+.locations-container h2{
     text-align: center;
 }
 
 .locations-container a:link,
 .locations-container a:visited{
     text-decoration: none;
-    color:black; 
+    color: black;
+}
+
+
+.location-block{
+    cursor: pointer;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+}
+
+.location-block:hover{
+    background-color: rgb(205,202,202);
+}
+
+@media screen and (max-width: 725px) {
+    #basilisk-container {
+        flex-direction: column-reverse;
+    }
+    
+    #basilisk-container aside{
+        width: 100%;
+    }
+    
+    #iframe-container{
+        width: 100%;
+    }
+    
+    .locations-container{
+        display:flex;
+        justify-content: center;
+    }
+
+    .location-block:hover{
+        background-color: transparent;
+    }
 }

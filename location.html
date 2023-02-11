@@ -1,25 +1,25 @@
 <link rel="stylesheet" href="style.css">
+<div id="title-container">
+    <h1>WHERE TO FIND US</h1>
+</div>
 <div id="basilisk-container">
     <aside>
-        <div id="title-container">
-            <h1>WHERE TO FIND US</h1>
-        </div>
         <div id="store-select">
-            <select name="store">
+            <select name="store" id="store-dropdown">
 
                 <option value="">Selecte Store</option>
 
                 <optgroup label="Florida">
-                    <option value="Miami">Volvo</option>
-                    <option value="West Palm">Saab</option>
+                    <option value="123">Miami</option>
+                    <option value="124">West Palm Beach</option>
                 </optgroup>
                 <optgroup label="Texas">
-                    <option value="Houston">Mercedes</option>
-                    <option value="Dallas">Audi</option>
+                    <option value="124">Dallas</option>
+                    <option value="125">Houston</option>
                 </optgroup>
             </select>
 
-            <button>Find</button>
+            <button onclick="dropdownSelect()">Find</button>
         </div>
 
         <div class="locations-container">
@@ -27,45 +27,41 @@
                 <h2>Florida</h2>
                 <div class="location-block">
                     <h3>Miami, FL</h3>
-                    <a href="">
+                    <p onclick="changeIframe('123')">
                         123 Main St
                         <br />
                         Miami FL,33166
-                    </a>
-                    <br />
-                    <a href="">800-555-0150</a>
+                    <p>
+                    <a href="tel:+18005550150">(800) 555-0150</a>
                 </div>
                 <div class="location-block">
                     <h3>West Palm Beach, FL</h3>
-                    <a href="">
-                        123 Main St
+                    <p onclick="changeIframe('124')">
+                        124 Main St
                         <br />
                         West Palm Beach FL,33166
-                    </a>
-                    <br />
-                    <a href="">800-555-0150</a>
+                    <p>
+                    <a href="">(800)555-0150</a>
                 </div>
                 <h2>Texas</h2>
                 <div class="location-block">
-                    <h3>Boca Raton, FL</h3>
-                    <a href="">
-                        123 Main St
+                    <h3>Dallas, TX</h3>
+                    <p onclick="changeIframe('125')">
+                        125 Main St
                         <br />
-                        Miami FL,33166
-                    </a>
-                    <br />
-                    <a href="">800-555-0150</a>
+                        Dallas TX,33166
+                    <p>
+                    <a href="">(800) 555-0150</a>
                 </div>
 
                 <div class="location-block">
-                    <h3>Jupiter,FL</h3>
-                    <a href="">
-                        123 Main St
+                    <h3>Houston, TX</h3>
+                    <p onclick="changeIframe('126')">
+                        126 Main St
                         <br />
-                        Jupiter FL,33166
-                    </a>
-                    <br />
-                    <a href="">800-555-0150</a>
+                        Houston TX,33166
+                    <p>
+                    <a href="">(800) 555-0150</a>
                 </div>
             </div>
         </div>
@@ -78,3 +74,5 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
+
+<script src="app.js"></script>
